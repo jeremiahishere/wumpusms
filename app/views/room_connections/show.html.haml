@@ -1,0 +1,12 @@
+%p#notice= notice
+
+%p
+  %b Start room:
+  = @room_connection.start_room_id
+%p
+  %b End room:
+  = @room_connection.end_room_id
+
+= link_to 'Edit', edit_room_connection_path(@room_connection)
+\|
+= link_to 'Back', room_connections_path

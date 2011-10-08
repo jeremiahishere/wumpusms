@@ -1,0 +1,6 @@
+= form_for @message, :url => game_play_update_path(@game) do |f|
+  .field
+    = f.label :text
+    = f.text_field :text
+  .actions
+    = f.submit 'Send'

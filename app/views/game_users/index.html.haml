@@ -1,0 +1,21 @@
+%h1 Listing game_users
+
+%table
+  %tr
+    %th Game
+    %th User
+    %th
+    %th
+    %th
+
+  - @game_users.each do |game_user|
+    %tr
+      %td= game_user.game_id
+      %td= game_user.user_id
+      %td= link_to 'Show', game_user
+      %td= link_to 'Edit', edit_game_user_path(game_user)
+      %td= link_to 'Destroy', game_user, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Game user', new_game_user_path

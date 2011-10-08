@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Game:
+  = @player.game_id
+%p
+  %b User:
+  = @player.user_id
+%p
+  %b Room:
+  = @player.room_id
+%p
+  %b Status:
+  = @player.status
+
+= link_to 'Edit', edit_player_path(@player)
+\|
+= link_to 'Back', players_path

@@ -1,0 +1,21 @@
+%h1 Listing room_connections
+
+%table
+  %tr
+    %th Start room
+    %th End room
+    %th
+    %th
+    %th
+
+  - @room_connections.each do |room_connection|
+    %tr
+      %td= room_connection.start_room_id
+      %td= room_connection.end_room_id
+      %td= link_to 'Show', room_connection
+      %td= link_to 'Edit', edit_room_connection_path(room_connection)
+      %td= link_to 'Destroy', room_connection, :confirm => 'Are you sure?', :method => :delete
+
+%br
+
+= link_to 'New Room connection', new_room_connection_path

@@ -1,0 +1,16 @@
+= form_for @game_user do |f|
+  -if @game_user.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@game_user.errors.count, "error")} prohibited this game_user from being saved:"
+      %ul
+        - @game_user.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :game_id
+    = f.text_field :game_id
+  .field
+    = f.label :user_id
+    = f.text_field :user_id
+  .actions
+    = f.submit 'Save'

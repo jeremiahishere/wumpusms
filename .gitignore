@@ -1,0 +1,14 @@
+db/*.sqlite3
+log/*.log
+tmp/
+.ackrc
+.vagrant
+*.swp
+log/*.log
+tmp/restart.txt
+config/mongoid.yml
+public/cache/
+public/stylesheets/compiled/
+public/system/*
+coverage/
+coverage.data
